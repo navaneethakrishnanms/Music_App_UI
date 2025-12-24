@@ -1,0 +1,218 @@
+:root {
+    --bg-black: #000000;
+    --sidebar-black: #000000; /* Deep black for sidebar */
+    --main-bg: #121212;
+    --card-hover: #282828;
+    --spotify-green: #1db954;
+    --text-gray: #b3b3b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Circular Std', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 1fr 90px;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background-color: var(--sidebar-black);
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-gray);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: 0.2s;
+}
+
+.nav-item:hover, .nav-item.active { color: white; }
+.nav-item i { font-size: 1.2rem; }
+
+.section-title {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: var(--text-gray);
+    margin: 20px 0 10px 12px;
+}
+
+.divider { border: 0.1px solid #282828; margin: 10px 12px; }
+
+.playlist-list p {
+    color: var(--text-gray);
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.playlist-list p:hover { color: white; }
+
+/* MAIN VIEW */
+.main-view {
+    background: linear-gradient(to bottom, #1f1f1f, #121212 40%);
+    overflow-y: auto;
+    padding: 15px 32px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 10px 0 20px 0;
+    background: transparent;
+    z-index: 100;
+}
+
+.history-btns i {
+    background: rgba(0,0,0,0.7);
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 0.8rem;
+}
+
+.user-profile {
+    background: rgba(0,0,0,0.7);
+    padding: 2px 8px 2px 2px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.user-profile img { width: 28px; height: 28px; border-radius: 50%; }
+
+/* GRID LAYOUT */
+h1 { font-size: 2rem; margin: 20px 0; }
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns as per your screenshot */
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) { .quick-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.grid-card {
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    height: 80px;
+}
+
+.grid-card:hover { background: rgba(255,255,255,0.2); }
+.grid-card img { width: 80px; height: 80px; object-fit: cover; border-radius: 4px 0 0 4px; }
+.grid-card span { padding-left: 16px; font-weight: bold; font-size: 0.9rem; }
+
+.play-btn-hover {
+    position: absolute;
+    right: 16px;
+    background: var(--spotify-green);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    color: black;
+}
+
+.grid-card:hover .play-btn-hover { opacity: 1; transform: translateY(0); }
+
+/* RECENTLY PLAYED */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.see-all { color: var(--text-gray); font-size: 0.75rem; font-weight: bold; cursor: pointer; }
+.see-all:hover { text-decoration: underline; }
+
+.scroll-cards { display: flex; gap: 24px; }
+
+.music-card {
+    background: #181818;
+    padding: 16px;
+    border-radius: 8px;
+    width: 200px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.music-card:hover { background: #282828; }
+.music-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+.music-card h4 { font-size: 1rem; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-card p { font-size: 0.85rem; color: var(--text-gray); line-height: 1.4; }
+
+/* PLAYER BAR */
+.player-bar {
+    grid-column: 1 / 3;
+    background: #181818;
+    border-top: 1px solid #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 200;
+}
+
+.current-track { width: 30%; display: flex; align-items: center; gap: 14px; }
+.current-track img { width: 56px; height: 56px; border-radius: 4px; }
+.track-info .title { font-size: 0.85rem; font-weight: 500; display: block; }
+.track-info .artist { font-size: 0.7rem; color: var(--text-gray); }
+.heart-icon { font-size: 1rem; color: var(--text-gray); cursor: pointer; margin-left: 10px; }
+.heart-icon:hover { color: white; }
+
+.player-controls { width: 40%; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.control-btns { display: flex; align-items: center; gap: 24px; color: var(--text-gray); font-size: 1rem; }
+.play-circle { background: white; color: black; width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.1s; }
+.play-circle:hover { transform: scale(1.06); }
+
+.progress-container { width: 100%; display: flex; align-items: center; gap: 8px; font-size: 0.7rem; color: var(--text-gray); }
+.progress-bar { flex: 1; height: 4px; background: #4d4d4d; border-radius: 2px; position: relative; }
+.fill { width: 30%; height: 100%; background: white; border-radius: 2px; }
+
+.volume-controls { width: 30%; display: flex; justify-content: flex-end; align-items: center; gap: 12px; color: var(--text-gray); }
+.volume-bar { width: 93px; height: 4px; background: #4d4d4d; border-radius: 2px; }
+.volume-fill { width: 70%; height: 100%; background: white; border-radius: 2px; }

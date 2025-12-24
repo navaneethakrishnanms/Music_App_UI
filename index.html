@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Music | Tamil Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="nav-links">
+                <div class="nav-item active"><i class="fas fa-home"></i> <span>Home</span></div>
+                <div class="nav-item"><i class="fas fa-search"></i> <span>Search</span></div>
+                <div class="nav-item"><i class="fas fa-book-open"></i> <span>Your Library</span></div>
+            </div>
+
+            <div class="playlist-section">
+                <p class="section-title">PLAYLISTS</p>
+                <div class="nav-item"><i class="fas fa-plus-square"></i> <span>Create Playlist</span></div>
+                <div class="nav-item"><i class="fas fa-heart"></i> <span>Liked Songs</span></div>
+                <hr class="divider">
+                <div class="playlist-list">
+                    <p>Tamil Retro Hits</p>
+                    <p>A.R. Rahman Special</p>
+                    <p>Anirudh Vibes</p>
+                    <p>Peaceful Piano</p>
+                    <p>Classic Rock</p>
+                    <p>Coding Focus</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN VIEW -->
+        <main class="main-view">
+            <header class="top-nav">
+                <div class="history-btns">
+                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?u=subin" alt="User">
+                    <span>Subin</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </header>
+
+            <section class="content">
+                <h1>Good afternoon</h1>
+                
+                <!-- Quick Grid -->
+                <div class="quick-grid">
+                    <div class="grid-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop" alt="Tamil Hits">
+                        <span>Tamil Hits</span>
+                        <div class="play-btn-hover"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=300" alt="Techno">
+                        <span>Techno Trance</span>
+                        <div class="play-btn-hover"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Daily Mix">
+                        <span>Daily Mix 1</span>
+                        <div class="play-btn-hover"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300" alt="Hindi Top">
+                        <span>Hindi Top 50</span>
+                        <div class="play-btn-hover"><i class="fas fa-play"></i></div>
+                    </div>
+                </div>
+
+                <!-- Recently Played -->
+                <div class="section-header">
+                    <h2>Recently played</h2>
+                    <span class="see-all">SEE ALL</span>
+                </div>
+                <div class="scroll-cards">
+                    <div class="music-card">
+                        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=300" alt="">
+                        <h4>Tamil Lofi</h4>
+                        <p>Yuvan Shankar Raja • Radio</p>
+                    </div>
+                    <div class="music-card">
+                        <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=300" alt="">
+                        <h4>Ambient Chill</h4>
+                        <p>Delectatio • Single</p>
+                    </div>
+                    <div class="music-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300" alt="">
+                        <h4>Anirudh Hits</h4>
+                        <p>Aura Music • Playlist</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- PLAYER BAR -->
+        <footer class="player-bar">
+            <div class="current-track">
+                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=100" alt="">
+                <div class="track-info">
+                    <span class="title">Vaathi Coming</span>
+                    <span class="artist">Anirudh Ravichander</span>
+                </div>
+                <i class="far fa-heart heart-icon"></i>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-btns">
+                    <i class="fas fa-random"></i>
+                    <i class="fas fa-step-backward"></i>
+                    <div class="play-circle"><i class="fas fa-play"></i></div>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="progress-container">
+                    <span>1:42</span>
+                    <div class="progress-bar"><div class="fill"></div></div>
+                    <span>4:03</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <i class="fas fa-list-ul"></i>
+                <i class="fas fa-laptop"></i>
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-bar"><div class="volume-fill"></div></div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
