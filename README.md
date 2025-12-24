@@ -4,9 +4,7 @@ A beautiful Spotify-inspired music player UI built with pure HTML and CSS. Featu
 
 ## 🎵 Preview
 
-![Aura Music UI](screenshot.png)
-
-> **Note:** Take a screenshot of your running application and save it as `screenshot.png` in the project root to display the UI preview above.
+![Aura Music UI](image.png)
 
 ## ✨ Features
 
